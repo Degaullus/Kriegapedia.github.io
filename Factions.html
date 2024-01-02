@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Styles.css" />
+    <title>Kriegapedia : Factions</title>
+    <link
+      href="data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAqLvDAG+DjACKnaUAKTpDALHI0ACDkpsAl6qyABIlLQBqfYUAYXJ7AFtudgCZrLUApLe/AIOZoQCVqLAACRYeAK7BzABkeHsABAsUAMDT2wB3g40Ak6auAM3g6AC+0dkAmqy2AKCzuwChsLMAiZ+qAMve5gAMHycAb4KJAK3AyAALFB0Aip6lAGZ5ggCNnqUAY3V9AKu+xgA7TFUAPEZNAJyvtwAkOUEAjaCoAGV3gAAIGyMAYHN7AAADDACarbUAra2sABMoMAAGGSEAjZ2pALy+vgCnusIAj6CpAHh+fQCNm6cApbjAAJapsQC4uLcAjZ6nACY3QAABBRAAaXyEAFltdQCXrrQAHjE5AM7h6QB+jZYAZ3qCAL/S2gChtLwAg5aeAKCwtwDM3+cAa3yFAGV4gACfsroAkKOrAIGUnABre4AAkqKuAGN2fgAABg8AqrCvAKy/xwCSpa4AgpafADZJUQCerbAAycnLAA8gKQCMnaQAaXiBAKq9xQByfIYAm662AIyfpwB9kJgAlam0AF9yegAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN2NjFgAAAAAAAAAAAAAAQh8iJAJKAAAAAAAAAAAAABlbMTw1DAAAAAAAAAAAADgnDlI0WFkSAAAAAAAAAABVMysIXGIzKAAAAAAAAAAAEWEKECFATwUAAAAAAAAAUCotBEUGPi1DXQAAAAAAABUyPxNgTC9UHlEAAAAAAAAJD1NePT0uZTssAAAAAAAARikaNjAHAU47IwAAAAAAAAtQMBoNOkgwSUEAAAAAAABNAyZHHUtHJgMlAAAAAAAAADkBFBdEFF8cAAAAAAAAAAAAV1YYGCBkAAAAAAAAAAAAAAAAWhsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPw/AAD4HwAA+B8AAPAPAADwDwAA8A8AAOAHAADgBwAA4AcAAOAHAADgBwAA4AcAAPAPAAD4HwAA/n8AAP//AAA="
+      rel="icon"
+      type="image/x-icon"
+    />
+    <script src="myscripts.js"></script>
+  </head>
+  <body>
+    <button id="scrollToTopBtn" onclick="scrollToTop()">Top</button>
+    <script>
+      // Get the button
+      var mybutton = document.getElementById("scrollToTopBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function scrollToTop() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      }
+    </script>
+    <div class="header">
+      <h1 class="maintext">Kriegapedia</h1>
+      <h3 class="maintext" style="color: #202020">
+        Factions for Warhammer Old World
+      </h3>
+    </div>
+    <nav class="topnav">
+      <a href="#strategy">Strategy Phase</a>
+
+      <a href="#move">Movement Phase</a>
+
+      <a href="#shooting">Shooting Phase</a>
+
+      <a href="#combat">Combat Phase</a>
+
+      <a href="#magic">Magic</a>
+
+      <a href="#moral">Morale</a>
+
+      <a href="#psycho">Psychology</a>
+
+      <a href="#specrule">Special Rules</a>
+
+      <a href="#weapons">Weapons</a>
+
+      <a href="">Faction</a>
+    </nav>
+    <div class="disclaimer">
+      <h4>Disclaimer</h4>
+      <div id="disclaimertext">
+        This site is a test under construction, not a remake of
+        <i>"Back To the 90's IT"</i>. It contains all the rules leaked up to now
+        02.01.23 and will be updated. If you have questions, feedback :
+        <br />
+        <br />
+      </div>
+      <a class="disclaimerlink" href="https://t.me/CommissarYarrick666"
+        >Please Telegram Me</a
+      >
+    </div>
+    <article class="article">
+      <h3>Build your army</h3>
+      <p>
+        As they have always been in real life, armies in Warhammer: The Old
+        World are selected according to a system of ‘points’. Games do not have
+        recommended points values – as long as you’ve got a General and three
+        Units, you have an army. However, 2,000 points per side will make for a
+        substantial two-to-three-hour game – perhaps involving 100 or more
+        models each.
+      </p>
+      <img
+        src="https://www.warhammer-community.com/wp-content/uploads/2023/12/yhjETBvbqMIEatQz.jpg"
+        alt="understand armycompo"
+      />
+      <p>
+        There’s a lot here to unpack. Firstly, you can’t overload your army with
+        powerful wizards and mighty heroes – Prophetesses and Barons are a rare
+        occurrence, even in the armies of the king. There is, however, the
+        flexibility to take characters of lower ranks: Paladins, Damsels, and
+        Sergeants at Arms enjoy no such limits – and you’ll certainly want at
+        least one Paladin for that free Battle Standard Bearer upgrade.
+        Otherwise, as long as 25% of your roster (500 points in a 2,000-point
+        game) is spent on units listed as Core, and includes one unit of Knights
+        of the Realm and another of peasant levies, army selection is very
+        flexible. As you’d expect, Grail Knights and Field Trebuchets aren’t
+        such a common sight, but at 38 points per model, +7 per champion,
+        musician, and standard, you can just about cram two units of six Grail
+        Knights into a 2,000-point army – perfect for any Duke who prefers to
+        keep every single one of his eggs right there in one decorative basket.
+      </p>
+      <img
+        src="https://www.warhammer-community.com/wp-content/uploads/2023/12/vFSHYrHdhWf3L5rd.jpg"
+        alt="armylistbretonia"
+      />
+    </article>
+    <article class="article">
+      <h3 id="knightvirtue">Knight Virtue</h3>
+      <div class="nb">
+        <h4>Virtue Of The Impetuous Knight</h4>
+        <div>
+          A model with thie virtue gains the impetuous special rule. In
+          addition, this model and its unit increase its maximal possible charge
+          by 3". Finally, when this model (and its unit) makes a Charge Roll,
+          you may apply a +D3 modifier to the result.
+        </div>
+      </div>
+    </article>
+    <article class="article">
+      <h3 id="magicitems">Magic Items</h3>
+      <div class="nb">
+        <h4>Magic Weapons</h4>
+        <div class="nbmagic">
+          <h4>Dragon Slaying Sword</h4>
+          <p>
+            <i
+              >A mighty blade, wielded by many great heroes in their endless
+              quest to slay foul Monsters.</i
+            >
+          </p>
+          <table>
+            <tr>
+              <th>R</th>
+              <th>S</th>
+              <th>AP</th>
+              <th>Special Rule</th>
+            </tr>
+            <tr>
+              <td>Combat</td>
+              <td>S</td>
+              <td>-</td>
+              <td>Magical Attacks, Monster Slayer</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="nb">
+        <h4>Magic Standart</h4>
+        <div class="nbmagic">
+          <h4>The Blazing Banner</h4>
+          <p>
+            <i
+              >An eternal flame flickersabout the weapons of those that march
+              beneath the Blazing Banner.</i
+            >
+          </p>
+          <div>
+            A unit carriyng the Blazing Banner gains the Flaming attack special
+            rule
+          </div>
+        </div>
+      </div>
+    </article>
+    <div id="handmaidens" class="articledata">
+      <div class="leftcolumn" class="datasheettable">
+        <h4>Handmaidens Of The Lady</h4>
+        <table id="datasheettable">
+          <thead>
+            <tr>
+              <th></th>
+              <th>M</th>
+              <th>WS</th>
+              <th>BS</th>
+              <th>S</th>
+              <th>T</th>
+              <th>W</th>
+              <th>I</th>
+              <th>A</th>
+              <th>Ld</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Prophetes</td>
+              <td>4</td>
+              <td>4</td>
+              <td>3</td>
+              <td>3</td>
+              <td>3</td>
+              <td>3</td>
+              <td>3</td>
+              <td>2</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>Damsel</td>
+              <td>4</td>
+              <td>4</td>
+              <td>3</td>
+              <td>3</td>
+              <td>3</td>
+              <td>3</td>
+              <td>3</td>
+              <td>1</td>
+              <td>7</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="rightcolumn">
+        <div class="detailsdatasheet">
+          <ul>
+            <u>Troop size </u>
+            <ul>
+              <i>regular infantry-Charcacter</i>
+            </ul>
+          </ul>
+          <ul>
+            <u>Base Size</u>
+            <ul>
+              <i>25x25mm</i>
+            </ul>
+          </ul>
+          <ul>
+            <u>Unit Size</u>
+            <ul>
+              <i>1</i>
+            </ul>
+          </ul>
+          <ul>
+            <u>Equipment</u>
+            <ul>
+              <i>Hand weapon</i>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="leftcolumn">
+        <div class="optionsdatasheet">
+          <h6>Magic</h6>
+          <ul>
+            A Prohet is a level 3 Wizard, a Damsel is a Level 1 Wizard. Every
+            Handmaiden of the Lady knows spells from the following lore of magic
+            :
+            <div class="example">
+              - Battle Magic <br />- Elementalist <br />- Illusion
+            </div>
+          </ul>
+          <h6>Options</h6>
+          <ul>
+            May be Mounted
+          </ul>
+          <ul>
+            A Prophetes may :
+            <ul>
+              Be a level 4 Wizard (+30pts)
+            </ul>
+            <ul>
+              Purchase
+              <a href="#magicitems">Magic Items</a>
+              up to a total of 100 pts
+            </ul>
+          </ul>
+          <ul>
+            A Damsel may
+            <ul>
+              Be a Level 2 Wizard (+30pts)
+            </ul>
+            <ul>
+              Purchase
+              <a href="#magicitems">Magic Items</a>
+              for a total of 50 pts
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="specialrulesdatasheet">
+          <h6>Special rule</h6>
+          Aura of the Lady,
+          <a class="hiddentext"
+            >Blessing of the Lady
+            <div class="popup">
+              <h6>Blessing of the Lady</h6>
+              <br />
+              The Blessings of the Lady is an army-wide rule for the Kingdom of
+              Bretonnia. Instead of rolling to see who goes first, a Bretonnian
+              army may instead kneel to pray for the protection of the Lady of
+              the Lake. This grants a 6+ Ward Save (invulnerable save) against
+              any wounds suffered, or 5+ against wounds of Strength 5 or higher.
+              Of course, this blessing can be lost by besmirching one’s own
+              honour – either when a unit flees, or a character declines a
+              challenge.
+            </div></a
+          >, Lore of the Lady, Magical Attacks, Magical Resistance (-2), Shield
+          of the Lady.
+        </div>
+      </div>
+    </div>
+    <div id="Unicorn" class="articledata">
+      <div class="leftcolumn" class="datasheettable">
+        <h4>Unicorn</h4>
+        <table id="datasheettable">
+          <thead>
+            <tr>
+              <th></th>
+              <th>M</th>
+              <th>WS</th>
+              <th>BS</th>
+              <th>S</th>
+              <th>T</th>
+              <th>W</th>
+              <th>I</th>
+              <th>A</th>
+              <th>Ld</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Unicorn</td>
+              <td>10</td>
+              <td>4</td>
+              <td>-</td>
+              <td>4</td>
+              <td>-</td>
+              <td>+1</td>
+              <td>5</td>
+              <td>2</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="rightcolumn">
+        <div class="detailsdatasheet">
+          <ul>
+            <u>Troop size </u>
+            <ul>
+              <i>Monstruous Cavalry</i>
+            </ul>
+          </ul>
+          <ul>
+            <u>Base Size</u>
+            <ul>
+              <i>40x60mm</i>
+            </ul>
+          </ul>
+          <ul>
+            <u>Unit Size</u>
+            <ul>
+              <i>1</i>
+            </ul>
+          </ul>
+          <ul>
+            <u>Equipment</u>
+            <ul>
+              <i>Hooves and horn (count as a hand weapon) </i>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="leftcolumn">
+        <div class="optionsdatasheet">
+          <h6></h6>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="specialrulesdatasheet">
+          <h6>Special rule</h6>
+          Armour Bane (2, Unicorn Only), Armoured Hide (1), Beguiling Aura,
+          <a class="hiddentext"
+            >Counter Charge
+            <div class="popup">
+              <h6>Counter Charge</h6>
+              <br />
+              If an unit is charged by Monster, Cavalry, and Charriot from a
+              longer distance than their attacker's movement characteristic,
+              this charged unit can move D3+1 in response.
+              <br />Both parts count as charging and Initiative then come into
+              play.
+            </div></a
+          >, Magical attacks, Stomp Attack,
+          <a class="hiddentext"
+            >Swiftride
+            <div class="popup">
+              <h6>Swiftride</h6>
+              <br />
+              Adds a further 3” to your maximum charge range, and +D6” to any
+              given charge, flight, or pursuit.
+            </div></a
+          >,
+        </div>
+      </div>
+    </div>
+
+    <div id="lordofbretonia" class="articledata">
+      <div class="leftcolumn" class="datasheettable">
+        <h4>Lords of Bretonia</h4>
+        <table id="datasheettable">
+          <thead>
+            <tr>
+              <th></th>
+              <th>M</th>
+              <th>WS</th>
+              <th>BS</th>
+              <th>S</th>
+              <th>T</th>
+              <th>W</th>
+              <th>I</th>
+              <th>A</th>
+              <th>Ld</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Duke</td>
+              <td>4</td>
+              <td>7</td>
+              <td>3</td>
+              <td>5</td>
+              <td>4</td>
+              <td>4</td>
+              <td>5</td>
+              <td>5</td>
+              <td>9</td>
+            </tr>
+            <tr>
+              <td>Baron</td>
+              <td>4</td>
+              <td>6</td>
+              <td>3</td>
+              <td>5</td>
+              <td>4</td>
+              <td>3</td>
+              <td>5</td>
+              <td>4</td>
+              <td>9</td>
+            </tr>
+            <tr>
+              <td>Paladin</td>
+              <td>4</td>
+              <td>6</td>
+              <td>3</td>
+              <td>5</td>
+              <td>4</td>
+              <td>2</td>
+              <td>4</td>
+              <td>3</td>
+              <td>8</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="rightcolumn">
+        <div class="detailsdatasheet">
+          <ul>
+            <u>Troop size </u>
+            Regular infantry (Charcacter)
+          </ul>
+          <ul>
+            <u>Base Size</u>
+            25x25mm
+          </ul>
+          <ul>
+            <u>Unit Size</u>
+            1
+          </ul>
+          <ul>
+            <u>Equipment</u>
+            Hand weapon and heavy armor
+          </ul>
+        </div>
+      </div>
+      <div class="leftcolumn">
+        <div class="optionsdatasheet">
+          <h6>Options</h6>
+          <ul>
+            - May take one of the following :
+            <ul>
+              -
+              <a class="hiddentext"
+                >Morning Star
+                <div class="popup">
+                  <h6>Morning Star</h6>
+                  <p>Adds +1 Strength and -1AP in the first round of combat</p>
+                </div></a
+              >
+              (+3pts)
+            </ul>
+            <ul>
+              -
+              <a class="hiddentext"
+                >Great Weapon
+                <div class="popup">
+                  <p>
+                    Add +2 Strengh and -2Ap in the first round of combat but you
+                    Strike Last
+                  </p>
+                </div></a
+              >(+3pts)
+            </ul>
+            <ul>
+              - Lance (if mounted) (+4pts)
+            </ul>
+          </ul>
+          <ul>
+            - May take a
+            <a class="hiddentext"
+              >Shield
+              <div class="popup">Improve your armor save by +1.</div>
+            </a>
+            (+2pts)
+          </ul>
+          <ul>
+            -May be Mounted
+          </ul>
+          <ul>
+            A baron or Paladin may replace the Knight's Vow woth either :
+            <ul>
+              - The Questing Vow (+15pts)
+            </ul>
+            <ul>
+              - The Grail Vow (+20pts)
+            </ul>
+          </ul>
+          <ul>
+            - May take a single
+            <a class="links" href="#knightvirtue">Knight Virtue</a>
+          </ul>
+          <ul>
+            - A duke can purchase
+            <a href="#magicitems">Magic Items</a>
+            for a total of 100pts
+          </ul>
+          <ul>
+            - A baron can purchase
+            <a href="#magicitems">Magic Items</a>
+            for a total of 75pts
+          </ul>
+          <ul>
+            - A Paladin can purchase
+            <a href="#magicitems">Magic Items</a>
+            for a total of 50pts
+          </ul>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="specialrulesdatasheet">
+          <h6>Special rule</h6>
+          <ul>
+            <b>Dukes</b>
+            :
+            <a class="hiddentext"
+              >Blessing of the Lady
+              <div class="popup">
+                <h6>Blessing of the Lady</h6>
+                <br />
+                The Blessings of the Lady is an army-wide rule for the Kingdom
+                of Bretonnia. Instead of rolling to see who goes first, a
+                Bretonnian army may instead kneel to pray for the protection of
+                the Lady of the Lake. This grants a 6+ Ward Save (invulnerable
+                save) against any wounds suffered, or 5+ against wounds of
+                Strength 5 or higher. Of course, this blessing can be lost by
+                besmirching one’s own honour – either when a unit flees, or a
+                character declines a challenge.
+              </div></a
+            >
+            >, Rallying Cry, The Grail Vow
+          </ul>
+          <ul>
+            <b>Baron & Paladin</b>
+            :
+            <a class="hiddentext"
+              >Blessing of the Lady
+              <div class="popup">
+                <h6>Blessing of the Lady</h6>
+                <br />
+                The Blessings of the Lady is an army-wide rule for the Kingdom
+                of Bretonnia. Instead of rolling to see who goes first, a
+                Bretonnian army may instead kneel to pray for the protection of
+                the Lady of the Lake. This grants a 6+ Ward Save (invulnerable
+                save) against any wounds suffered, or 5+ against wounds of
+                Strength 5 or higher. Of course, this blessing can be lost by
+                besmirching one’s own honour – either when a unit flees, or a
+                character declines a challenge.
+              </div></a
+            >, Rallying Cry, The Knights Vow
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="articledata">
+      <div class="leftcolumn" class="datasheettable">
+        <h4>Hyppogryph</h4>
+        <table id="datasheettable">
+          <thead>
+            <tr>
+              <th></th>
+              <th>M</th>
+              <th>WS</th>
+              <th>BS</th>
+              <th>S</th>
+              <th>T</th>
+              <th>W</th>
+              <th>I</th>
+              <th>A</th>
+              <th>Ld</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Hyppogryph</td>
+              <td>7</td>
+              <td>5</td>
+              <td>-</td>
+              <td>5</td>
+              <td>+1</td>
+              <td>+3</td>
+              <td>5</td>
+              <td>4</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="rightcolumn">
+        <div class="detailsdatasheet">
+          <ul>
+            <u>Troop size </u>
+            Monstruous creature
+          </ul>
+          <ul>
+            <u>Base Size</u>
+            50x50mm
+          </ul>
+          <ul>
+            <u>Unit Size</u>
+            1
+          </ul>
+          <ul>
+            <u>Equipment</u>
+            Wickled claws, serated maw and griffonic pelt (coun as heavy armor).
+          </ul>
+        </div>
+      </div>
+      <div class="leftcolumn">
+        <div class="optionsdatasheet">
+          <h6>Options</h6>
+          <ul>
+            May have barding +15pts
+          </ul>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="specialrulesdatasheet">
+          <h6>Special rule</h6>
+          Close order, Couter charge, Fly (9"), Large Target, Stomp Attacks
+          (D3), Swift ride,
+          <a class="hiddentext"
+            >Terror
+            <div class="popup">
+              <h6>Terror</h6>
+              <br />
+              If you’re charged by a beast with this effect, you have to take a
+              Leadership test just to be able to declare a charge reaction – if
+              you fail, you flee. And that’s before any dice are rolled to see
+              if the charge succeeds. Terror also applies an extra -1 penalty to
+              opposing units’ Leadership characteristic when taking Break Tests
+              – making a break and flee outcome that much more likely.
+            </div></a
+          >.
+        </div>
+      </div>
+    </div>
+    <div id="Menatarms" class="articledata">
+      <div class="leftcolumn" class="datasheettable">
+        <h4>Men at Arms</h4>
+        <table id="datasheettable">
+          <thead>
+            <tr>
+              <th></th>
+              <th>M</th>
+              <th>WS</th>
+              <th>BS</th>
+              <th>S</th>
+              <th>T</th>
+              <th>W</th>
+              <th>I</th>
+              <th>A</th>
+              <th>Ld</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Man at Arms</td>
+              <td>4</td>
+              <td>2</td>
+              <td>2</td>
+              <td>3</td>
+              <td>3</td>
+              <td>1</td>
+              <td>3</td>
+              <td>1</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>Yeoman</td>
+              <td>4</td>
+              <td>6</td>
+              <td>3</td>
+              <td>5</td>
+              <td>4</td>
+              <td>3</td>
+              <td>5</td>
+              <td>2</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>Grail Monk</td>
+              <td>4</td>
+              <td>6</td>
+              <td>3</td>
+              <td>5</td>
+              <td>4</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>6</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="rightcolumn">
+        <div class="detailsdatasheet">
+          <ul>
+            <u>Troop size </u>
+            <ul>
+              regular infantry
+            </ul>
+          </ul>
+          <ul>
+            <u>Base Size</u>
+            <ul>
+              25x25mm
+            </ul>
+          </ul>
+          <ul>
+            <u>Unit Size</u>
+            <ul>
+              10+
+            </ul>
+          </ul>
+          <ul>
+            <u>Equipment</u>
+            <ul>
+              Hand weapons, polearms, light armor, shields
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="leftcolumn">
+        <div class="optionsdatasheet">
+          <h6>Options</h6>
+          <ul>
+            Any unit :
+            <ul>
+              Upgrade one model to a Yeoman (Champion) +7pts per unit
+            </ul>
+            <ul>
+              Upgrade one model to a Grail Monk +7pts per unit
+            </ul>
+            <ul>
+              Upgrade one model to a Standart bearer +5pts per unit
+            </ul>
+            <ul>
+              Upgrade one model to a Musician +5pts per unit
+            </ul>
+            <ul>
+              A Grail Monk may be equipped with a
+              <a class="hiddentext"
+                >Blessed Triptysch
+                <div class="popup">
+                  <h6>Blessed Trypstisch</h6>
+                  <br />
+                  Grants the whole unit Stubborn, so the first time they are
+                  required to take a Break Test they don’t need to risk a dice
+                  roll. Instead, they Fall Back in Good Order
+                </div></a
+              >Blessed Triptysch +25pts
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="specialrulesdatasheet">
+          <h6>Special rule</h6>
+          <div>
+            Close order, Horde, Levies, Peasantry,
+            <a class="hiddentext"
+              >Shieldwave
+              <div class="popup">
+                <h6>Shieldwave</h6>
+                <br />
+                Your Unit can Give Ground instead of Falling Back.
+              </div></a
+            >, Warband
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="grailknights" class="articledata">
+      <div class="leftcolumn" class="datasheettable">
+        <h4>Grail Knights</h4>
+        <p>38pts per model</p>
+        <table id="datasheettable">
+          <thead>
+            <tr>
+              <th></th>
+              <th>M</th>
+              <th>WS</th>
+              <th>BS</th>
+              <th>S</th>
+              <th>T</th>
+              <th>W</th>
+              <th>I</th>
+              <th>A</th>
+              <th>Ld</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Grail Knight</td>
+              <td>-</td>
+              <td>6</td>
+              <td>2</td>
+              <td>4</td>
+              <td>4</td>
+              <td>1</td>
+              <td>5</td>
+              <td>2</td>
+              <td>9</td>
+            </tr>
+            <tr>
+              <td>Grail Guardian</td>
+              <td>-</td>
+              <td>6</td>
+              <td>2</td>
+              <td>4</td>
+              <td>4</td>
+              <td>1</td>
+              <td>5</td>
+              <td>3</td>
+              <td>9</td>
+            </tr>
+            <tr>
+              <td>Bretonian Horse</td>
+              <td>8</td>
+              <td>3</td>
+              <td>-</td>
+              <td>3</td>
+              <td>-</td>
+              <td>-</td>
+              <td>3</td>
+              <td>1</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="rightcolumn">
+        <div class="detailsdatasheet">
+          <ul>
+            <u>Troop size </u>
+            <ul>
+              heavy cavalry
+            </ul>
+          </ul>
+          <ul>
+            <u>Base Size</u>
+            <ul>
+              30x30mm
+            </ul>
+          </ul>
+          <ul>
+            <u>Unit Size</u>
+            <ul>
+              3+
+            </ul>
+          </ul>
+          <ul>
+            <u>Equipment</u>
+            <ul>
+              Grail knight : hand weapons,
+              <a class="hiddentext"
+                >Lance
+                <div class="popup">
+                  <img
+                    class="imgpopup"
+                    src="https://www.warhammer-community.com/wp-content/uploads/2023/12/MHZTXjIEIFqIa29Y.jpg"
+                    alt="lance"
+                  /></div></a
+              >lances, heavy armor and shields
+            </ul>
+            <ul>
+              Warhorses : iron-shod hooves (count as hand weapons) and barding
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="leftcolumn">
+        <div class="optionsdatasheet">
+          <h6>Options</h6>
+          <ul>
+            Any Unit may
+            <ul>
+              Upgrade one model to a Grail Guardian (champion) +7ptsper unit
+            </ul>
+            <ul>
+              Upgrade one model to a Standart Bearer +7ptsper unit
+            </ul>
+            <ul>
+              Upgrade one model to a Musician +7ptsper unit
+            </ul>
+            <ul>
+              Purchase a magic Standart worth up to 100pts
+            </ul>
+          </ul>
+          <ul>
+            A grail Guardian may take
+            <ul>
+              A single
+              <a class="links" href="#knightvirtue">Knight Virtue</a>
+            </ul>
+            <ul>
+              <a href="#magicitems">Magic Items</a>
+              up to a total of 50pts
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="specialrulesdatasheet">
+          <h6>Special rule</h6>
+          <ul>
+            <a class="hiddentext"
+              >Blessing of the Lady
+              <div class="popup">
+                <h6>Blessing of the Lady</h6>
+                <br />
+                The Blessings of the Lady is an army-wide rule for the Kingdom
+                of Bretonnia. Instead of rolling to see who goes first, a
+                Bretonnian army may instead kneel to pray for the protection of
+                the Lady of the Lake. This grants a 6+ Ward Save (invulnerable
+                save) against any wounds suffered, or 5+ against wounds of
+                Strength 5 or higher. Of course, this blessing can be lost by
+                besmirching one’s own honour – either when a unit flees, or a
+                character declines a challenge.
+              </div></a
+            >,
+            <a class="hiddentext"
+              >Counter Charge
+              <div class="popup">
+                <h6>Counter Charge</h6>
+                <br />
+                If an unit is charged by Monster, Cavalry, and Charriot from a
+                longer distance than their attacker's movement characteristic,
+                this charged unit can move D3+1 in response.
+                <br />Both parts count as charging and Initiative then come into
+                play.
+              </div></a
+            >,
+            <a class="hiddentext"
+              >Finest Warhorse
+              <div class="popup">
+                <h6>Finest Warhorse - Bretonnian Rule Only</h6>
+                <br />
+                You may reroll any 1s when you Charge, Flee, or Pursue before
+                discarding any dice.
+              </div></a
+            >,
+            <a class="hiddentext"
+              >First Charge
+              <div class="popup">
+                <h6>First Charge</h6>
+                <br />
+                If their First Charge of the game makes contact, the target unit
+                loses its rank bonus until the next round of combat.
+              </div></a
+            >,
+            <a class="hiddentext"
+              >Living Saints
+              <div class="popup">
+                <h6>Living Saints - Bretonnian Only</h6>
+                <br />
+                Models in the Unit can challenge enemy characters as if they
+                were characters.
+              </div></a
+            >
+            ,
+            <a class="hiddentext"
+              >Swiftride
+              <div class="popup">
+                <h6>Swiftride</h6>
+                <br />
+                Adds a further 3” to your maximum charge range, and +D6” to any
+                given charge, flight, or pursuit.
+              </div></a
+            >,
+            <a class="hiddentext"
+              >Grail Vow
+              <div class="popup">
+                <h6>Grail Vow</h6>
+                <br />
+                This rule provides further benefits: the Unit is unaffected by
+                Fear and Terror, it fights with Magical Attacks, and the first
+                time it fails a Break test, it may automatically Fall Back in
+                Good Order.
+              </div></a
+            >
+            Close Order, Finest Warhorse, Lance Formation.
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Styles.css" />
+    <title>Kriegapedia : Old World</title>
+    <link
+      href="data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAqLvDAG+DjACKnaUAKTpDALHI0ACDkpsAl6qyABIlLQBqfYUAYXJ7AFtudgCZrLUApLe/AIOZoQCVqLAACRYeAK7BzABkeHsABAsUAMDT2wB3g40Ak6auAM3g6AC+0dkAmqy2AKCzuwChsLMAiZ+qAMve5gAMHycAb4KJAK3AyAALFB0Aip6lAGZ5ggCNnqUAY3V9AKu+xgA7TFUAPEZNAJyvtwAkOUEAjaCoAGV3gAAIGyMAYHN7AAADDACarbUAra2sABMoMAAGGSEAjZ2pALy+vgCnusIAj6CpAHh+fQCNm6cApbjAAJapsQC4uLcAjZ6nACY3QAABBRAAaXyEAFltdQCXrrQAHjE5AM7h6QB+jZYAZ3qCAL/S2gChtLwAg5aeAKCwtwDM3+cAa3yFAGV4gACfsroAkKOrAIGUnABre4AAkqKuAGN2fgAABg8AqrCvAKy/xwCSpa4AgpafADZJUQCerbAAycnLAA8gKQCMnaQAaXiBAKq9xQByfIYAm662AIyfpwB9kJgAlam0AF9yegAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN2NjFgAAAAAAAAAAAAAAQh8iJAJKAAAAAAAAAAAAABlbMTw1DAAAAAAAAAAAADgnDlI0WFkSAAAAAAAAAABVMysIXGIzKAAAAAAAAAAAEWEKECFATwUAAAAAAAAAUCotBEUGPi1DXQAAAAAAABUyPxNgTC9UHlEAAAAAAAAJD1NePT0uZTssAAAAAAAARikaNjAHAU47IwAAAAAAAAtQMBoNOkgwSUEAAAAAAABNAyZHHUtHJgMlAAAAAAAAADkBFBdEFF8cAAAAAAAAAAAAV1YYGCBkAAAAAAAAAAAAAAAAWhsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPw/AAD4HwAA+B8AAPAPAADwDwAA8A8AAOAHAADgBwAA4AcAAOAHAADgBwAA4AcAAPAPAAD4HwAA/n8AAP//AAA="
+      rel="icon"
+      type="image/x-icon"
+    />
+    <script src="myscripts.js"></script>
+  </head>
+  <body>
+    <button id="scrollToTopBtn" onclick="scrollToTop()">Top</button>
+    <script>
+      // Get the button
+      var mybutton = document.getElementById("scrollToTopBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function scrollToTop() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      }
+    </script>
+    <div class="header">
+      <h1 class="maintext">Kriegapedia</h1>
+      <h3 class="maintext" style="color: #202020">
+        Rules for Warhammer Old World
+      </h3>
+    </div>
+    <nav class="topnav">
+      <a href="#strategy">Strategy Phase</a>
+
+      <a href="#move">Movement Phase</a>
+
+      <a href="#shooting">Shooting Phase</a>
+
+      <a href="#combat">Combat Phase</a>
+
+      <a href="#magic">Magic</a>
+
+      <a href="#moral">Morale</a>
+
+      <a href="#psycho">Psychology</a>
+
+      <a href="#specialrule">Special Rules</a>
+
+      <a href="http://127.0.0.1:5500/Factions.html" target="_blank">Faction</a>
+
+      <a href="#meleeweapons">Weapons</a>
+    </nav>
+
+    <div id="pub">
+      <p>Need a 3D printed Army?</p>
+      <a
+        target="blank"
+        href="https://t.me/CommissarYarrick666"
+        onclick="closePub()"
+        >Telegram Me</a
+      >
+    </div>
+    <div class="disclaimer">
+      <h4>Disclaimer</h4>
+      <div id="disclaimertext">
+        This website is a test under construction, not a remake of
+        <i>"Back To the 90's IT"</i>. It contains all the rules leaked up to now
+        02.01.23 and will be updated. If you have questions, feedback :
+        <br />
+        <br />
+      </div>
+      <a class="disclaimerlink" href="https://t.me/CommissarYarrick666"
+        >Please Telegram Me</a
+      >
+    </div>
+
+    <article class="article">
+      <h2>The Turn Sequence</h2>
+      <h3>1. The strategy phase</h3>
+      <div>
+        <p>
+          During this phase, the active player attempts to cast Enchantment or
+          Hex spells and make use of certain special rules, before attempting to
+          rally any fleeing units.
+          <br />
+        </p>
+        <div class="example">
+          For example, Stone Trolls would take their Stupidity tests at this
+          juncture, and it is also when Night Goblin Fanatics are placed on the
+          table.
+        </div>
+      </div>
+      <h3>2. The mouvement phase</h3>
+      <div>
+        <p>
+          The movement phase starts with the declaration of charges and of
+          charge reactions, then the movement of charging units. After this,
+          comes Compulsory movements. Finally, any remaining moment is carried
+          out and Conveyance spell are cast.
+        </p>
+      </div>
+      <h3>3. The shooting Phase</h3>
+      <div>
+        <p>
+          During the shooting phase, the active player shoots with those units
+          in their army armed with missile weapons, with their war machines and
+          attempt to cast Magical missiles and Magical Vortex spells.
+        </p>
+      </div>
+      <h3>4. The Combat Phase</h3>
+      <div>
+        <p>
+          During this phase, units fight in deadly hand-to-hand melee and Wizard
+          attempt to fend off their attackers with Assailment spells. Unit that
+          has lost combat may be driven back or become broken and flee. At the
+          end of this phase, once all combat have been resolved, the active
+          player’s turn ends.
+        </p>
+      </div>
+    </article>
+    <article class="article">
+      <h2 id="strategy">The Strategy Phase</h2>
+      <p>The strategy phase is divided into four sub-phases</p>
+      <div>
+        <h3>1. The 1st sub-phase</h3>
+        <p>
+          We begin with the Start of Turn sub-phase, which is when certain units
+          perform special actions or take tests. These aren’t common, and their
+          details will be clearly stated in their rules. For example, Stone
+          Trolls would take their Stupidity tests at this juncture, and it’s
+          also when Night Goblin Fanatics are placed on the table. Additionally,
+          a particular scenario may require you to check whether a victory
+          condition has been met at this point. You may also use this period to
+          tidy the table, removing stray casualties and errant dice.
+        </p>
+      </div>
+      <h3>2. The Command subphase</h3>
+      <div>
+        <p>This is when most Characters’ special rules fire off</p>
+        <div class="example">
+          For instance, a Bretonnian Lord brandishing the Falcon-horn of
+          Fredemund may blow it in the Command sub-phase, hopefully preventing
+          opponents from being able to Fly.
+        </div>
+      </div>
+      <h3>3. Conjuration subphase</h3>
+      <div>
+        <p>
+          In this phase, you cast Enchantments (magical boosts for your allies)
+          or Hexes (magical penalties to your enemies). Players take it in turns
+          during this step to choose Wizards who aren’t fleeing to attempt to
+          cast spells.
+        </p>
+        <div class="example">
+          The Tomb Kings, for instance, might choose to cast Djaf’s Incantation
+          of Cursed Blades from the Lore of Nehekara.
+        </div>
+      </div>
+      <h3>4. Ralliyng subphase</h3>
+      <div>
+        <p>
+          To take a Rally test, choose a unit and roll two dice against its
+          Leadership characteristic. If you fail, it will continue to flee
+          during the Movement Phase; if you pass, your unit is allowed a free
+          reform move and returns to the fray.
+        </p>
+        <div class="nb">
+          <h5>Modifier</h5>
+          <p>
+            If your unit is under Half strengh it gets a -1 modifier to its
+            Leadership when attempting to Rally. Under 25% and you need a
+            natural double 1
+          </p>
+        </div>
+      </div>
+    </article>
+    <article class="mouvphase" id="move">
+      <div class="article" id="formation">
+        <h2>The Mouvement phase</h2>
+        <h3>Formations</h3>
+        <p>
+          All units in the game must adopt a formation, which will dictate how
+          they act in battle, including moving and fighting. Most units can only
+          adopt one: Close Order, though some can also choose options such as
+          Skirmish or Open Order, and for Bretonnian Knights, the mighty Lance
+          formation.
+        </p>
+        <p class="example">
+          It is important to notice that we still don't know when the player
+          will be able to declare the formation and how long the formation will
+          act. Prbably in the Command phase.
+        </p>
+        <img
+          src="https://www.warhammer-community.com/wp-content/uploads/2023/11/GQDZtZHpRxuxsvxy.jpg"
+          alt="formationoldworld"
+        />
+        <h4>Close Order Units</h4>
+        <div>
+          <p>
+            Close Order units are arrayed in base-to-base contact, facing the
+            same direction in order to fight in ranks. Where possible, there
+            must be the same number of models in each rank, with more models in
+            the rank than the file, which sometimes means leaving spaces in the
+            back rank if necessary. They move and fight as a single entity –
+            walking, wheeling, charging, and exposing their flanks and rears.
+            The more full ranks you have, the greater your advantage in combat.
+          </p>
+          <p class="example">
+            When they need to move rapidly, your units can adopt a Marching
+            Column, reforming into a shape that’s deeper than it is wide. A unit
+            formed in this way may not charge and earns no rank bonus in combat,
+            but it can move at triple speed.
+          </p>
+          <div class="nb">
+            <p>
+              Once your unit is in Close order, you can bellow choose to adopt
+              one of this formation
+            </p>
+            <ol>
+              &#128997; Combat order
+            </ol>
+            <ol>
+              &#128997; Marching column
+            </ol>
+            <img
+              src="https://www.warhammer-community.com/wp-content/uploads/2023/11/ctOKOWzIk6V5omhw.jpg"
+              alt="combat order and marchin column"
+            />
+          </div>
+        </div>
+        <h4>Open Order Unit</h4>
+        <p>
+          Open Order units still fight in ranks, meanwhile, but they’re faster,
+          more agile, and handle tough terrain better.
+          <br />
+          <br />
+          Will be updatet from Games Workshop.
+        </p>
+        <p class="example">It will be probably a light version possibility</p>
+        <h4>Skirmisher units</h4>
+        <div>
+          <p>
+            Units with the Skirmisher special rule do not need to rank up at
+            all. So long as each model is within an inch of at least one of its
+            comrades, they can fan out. They tend to be highly manoeuvrable,
+            harrying enemy units with missile fire and hit-and-fade flank
+            charges.
+          </p>
+          <p class="example">
+            Skirmisher unit has his models spaced from 1" but their is no
+            informations about conga lines now
+          </p>
+        </div>
+        <h4>Lance</h4>
+        <p>
+          The famous Bretonian formation will be uploaded soon by Games Workshop
+        </p>
+        <div>
+          <p></p>
+        </div>
+      </div>
+      <div class="article" id="movement">
+        <h3>Rules of the Movement</h3>
+        <p>
+          The movement phase is, as with every phase in the game, divided into
+          four parts.
+        </p>
+        <h4>1. Declaration of charges</h4>
+        <p>
+          The active player nominates each unit that they want to charge and
+          their targets. Charging is the only way to enter combat, and there are
+          a couple of caveats: the
+          <b>target must be visible to your unit </b> and at least partially in
+          its front arc, and your unit cannot be fleeing, rallied this turn, or
+          already engaged in combat. You may, however, pre-measure the distance
+          to your targets.
+        </p>
+        <div class="nb">
+          <h5>Charge reaction</h5>
+          <p>
+            The inactive player declares Charge Reactions. Most units may Hold
+            to receive the charge, Stand and Shoot if they have missile weapons
+            and are further away than the charging unit’s Movement
+            characteristic, or Flee by pivoting around 180 degrees and trying to
+            escape. If you’re caught, however, you’ll be run down and destroyed!
+            Beyond that, some especially alert units may Counter Charge…
+          </p>
+          <article class="example">
+            Each time a unit is the target of a charge, it can :
+            <br />
+            <br />
+            - Hold and Stand
+            <br />
+            <br />
+            - Stand and shoot (if it has shooting weapons)
+            <br />
+            <br />
+            -
+            <a class="hiddentext">
+              Flee
+              <div class="popup">
+                <br />
+                <h6>Fleeing</h6>
+                The unit turns and runs in the opposite direction from whatever
+                caused it to flee (and whichever enemy unit had the stronger
+                unit strength if it was a multiple combat). They run 2D6”,
+                pivoting only to avoid impassable terrain, and if any part of
+                the fleeing unit crosses a battlefield edge, it is destroyed. If
+                the enemy gives chase and rolls high enough on 2D6 to make
+                contact, the fleeing unit is destroyed. If they run through
+                another enemy unit, they take additional wounds as they go. If
+                they run through a friendly unit, however, they’re safe – but
+                that unit may now bear the brunt of the pursuers’ charge. In
+                short: try not to break and flee.
+              </div>
+            </a>
+            <br />
+            <br />
+            - Counter charge if it has the
+            <a class="links" href="#specialrule">special rule</a> Counter
+            charge.
+          </article>
+        </div>
+        <h4>2. Charge Move</h4>
+        <p>
+          The second step is to actually make your Charge Moves. To establish
+          the range of their charge, units roll two dice, pick the highest score
+          from the two and add it to their Movement characteristic. This means a
+          unit of Skeleton Warriors has a charge range of between 5” and 10”,
+          but Bretonnian Knights are rather more dangerous – their Swiftstride
+          special rule adds an extra d6” to every charge they make.
+        </p>
+        <p>
+          If you’re in range – accounting for wheeling – move the charging unit
+          into base contact with its target, bringing the maximum number of
+          models from both sides into combat. If you whiff the roll, however,
+          the charge has failed. The unit must move the full distance rolled
+          towards its target, but your warriors haven’t got the impetus to
+          complete the charge and they’re now ripe to be hit back next turn!
+        </p>
+        <p class="example">
+          Charge move = 2D6 pick the highest + Movement caracteristic of a
+          model.
+          <br />
+          <br />
+          - If the chare failed, the unit has to make this move.
+        </p>
+        <h4>3. Compulsory move</h4>
+        <div>
+          The third step accounts for Compulsory Moves. This is mostly to
+          accommodate fleeing
+          <a class="hiddentext">
+            (Flee)
+            <div class="popup">
+              <h6>Fleeing</h6>
+              <br />
+              The unit turns and runs in the opposite direction from whatever
+              caused it to flee (and whichever enemy unit had the stronger unit
+              strength if it was a multiple combat). They run 2D6”, pivoting
+              only to avoid impassable terrain, and if any part of the fleeing
+              unit crosses a battlefield edge, it is destroyed. If the enemy
+              gives chase and rolls high enough on 2D6 to make contact, the
+              fleeing unit is destroyed. If they run through another enemy unit,
+              they take additional wounds as they go. If they run through a
+              friendly unit, however, they’re safe – but that unit may now bear
+              the brunt of the pursuers’ charge. In short: try not to break and
+              flee.
+            </div> </a
+          >units that failed to rally during the last
+          <a class="links" href="#strategy">Strategy Phase</a>, but it includes
+          other rarer moves such as the Random Movement of Night Goblin
+          Fanatics, or Stone Trolls who have failed their Stupidity test.
+        </div>
+        <h4>4. Remaining moves</h4>
+        <p>
+          The fourth step covers the Remaining Moves – regular manoeuvres that
+          don’t result in combat.
+        </p>
+      </div>
+      <div class="article">
+        <h3>The mechanic of movement</h3>
+        <p>
+          In general, units may Move or March, performing Manoeuvres on the way.
+          In the first case, they move up to their Movement characteristic, and
+          may then shoot later in the turn. In the later case, they may double
+          their movement but they sacrifice the ability to perform any manoeuvre
+          more complex than a wheel, and their ability to shoot this turn, for
+          speed.
+        </p>
+        <p>
+          While moving, a unit may Wheel, in which the unit pivots from one of
+          the front corners of its leading edge, measuring distance from the
+          outside model. You may also Turn all a unit’s models through 90 or 180
+          degrees, spending a quarter of your Movement for each 90 degrees, Move
+          Backwards or Sideways at half pace, and Redress the Ranks or Reform.
+        </p>
+        <img
+          class="img"
+          id="wheelimage"
+          src="https://www.warhammer-community.com/wp-content/uploads/2023/11/aWVykUdkbXoEgaAy.jpg"
+          alt="wheel"
+        />
+      </div>
+    </article>
+    <article class="article" id="shooting">
+      <h3>Shooting phase</h3>
+      <p>
+        As with the other phases, the Shooting Phase is broken into four steps
+        which you follow in turn for each unit: Declare Targets, Roll to Hit,
+        Roll to Wound, and Remove Casualties. Everyone and everything shoots in
+        this phase, whether they’re lowly peasant bowmen and barbarian
+        javelineers, a macabre Khemrian screaming skull catapult, or a High
+        Elven mage manifesting a Fiery Convocation.
+      </p>
+      <h4>1. Declare a target</h4>
+      <div>
+        First, pick a unit and declare its target. A unit can only shoot if it
+        has a ranged weapon, hasn’t marched or charged that turn, and isn’t
+        fleeing or in combat. To shoot, a model must have line of sight to its
+        target and you can’t split fire – so in some cases, not every member of
+        a unit can let loose. Models can (almost always) shoot only once, no
+        matter how many Attacks they have in their profile, and unless they have
+        the
+        <a class="hiddentext"
+          >Volley fire
+          <div class="popup">
+            <h6>&#128997; Volley Fire</h6>
+            <br />
+            A second rank is able to shoot on the target.
+          </div> </a
+        >special rule or are stationed on a hill, only the front rank may fire.
+      </div>
+      <h4>2. Roll to hit</h4>
+      <p>
+        To determine wether a model hits his target, you must make a roll to
+        hit. to make a roll to hit, roll a D6 for each model that is shooting
+        and look up the target number needed on the table bellow. Any dice that
+        beat or equal the target number shown (after appliyng modifiers) hav hit
+        the target.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Balistic skills</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>D6 roll to hit</td>
+            <td>6+</td>
+            <td>5+</td>
+            <td>4+</td>
+            <td>3+</td>
+            <td>2+</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="example">
+        The higher your BS, the easier it is to bullseye your target, and once
+        models reach a BS of 6 or more, they start earning rerolls on their
+        missed shots.
+      </p>
+      <p>
+        If a model has a BS of 6 or higher, it gains a reroll should it failed
+        to hit whilst shooting. The second roll usally has a lower chance of
+        hitting. On the tabke bellow, the first target number is the first roll,
+        the secon is the target number when rerolling.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Balistic skills</th>
+            <th>6</th>
+            <th>7</th>
+            <th>8</th>
+            <th>9</th>
+            <th>10</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>D6 roll to hit</td>
+            <td>2+/6+</td>
+            <td>2+/5+</td>
+            <td>2+/4+</td>
+            <td>2+/3+</td>
+            <td>2+/2+</td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      <div class="nb">
+        <h5>Modifer to Hit</h5>
+        <p>Every roll to hit is sensible to modifiers.</p>
+        <br />
+        <b>Apply -1 to hit if the unit :</b>
+        <p>&#128997; moved</p>
+        <p>&#128997; is in long range (more than half the range)</p>
+        <p>&#128997; is receiving a charge</p>
+        <p class="example">
+          Important : a natural one always misses, while negative modifiers can
+          stack past 6+, and you may find yourself having to roll 7+, 8+, or 9+
+          to hit (a natural six followed by another roll of 4+, 5+, or 6+!).
+        </p>
+      </div>
+      <h4>3. Roll to wound</h4>
+      <p>
+        Once you hit your target, you still have to wound it. Compare the
+        weapond strenghs of the attacker with the target's toughness.
+      </p>
+      <p class="example">
+        Note that there are even Toughness caps – a Strength 3 bow is simply too
+        weak to harm a beast of Toughness 9.
+      </p>
+      <img
+        src="https://www.warhammer-community.com/wp-content/uploads/2023/11/TR0X47ImFoECWkpj.jpg"
+        alt="tabletowound"
+      />
+      <br />
+      <div class="nb">
+        <h5>Saving throw</h5>
+        <p>
+          It wouldn’t be Warhammer without a saving throw, which your opponent
+          will make during this step. It’s a familiar process: compare the
+          Armour Penetration of the weapon with the armour value of the model
+          it’s hitting. Light armour grants a 6+ save and heavy armour a 5+,
+          which can be boosted with a shield, a barded mount, and certain spells
+          and magical items. There is a small difference, however, as models can
+          also have a Ward Save. This cannot be modified by AP, and it is rolled
+          for as a separate save made after the armour roll has failed.
+        </p>
+      </div>
+      <h4>4. Remove casualties</h4>
+      <div>
+        The final step is to remove casualties and take panic tests where
+        necessary. This is super simple – remove one model for every Wound
+        caused, unless the target has more than one Wound. You know the drill.
+        You’ll need to take a
+        <a class="hiddentext"
+          >panic test
+          <div class="popup">
+            <h6>Panic test</h6>
+            <br /><br />Roll 2D6 and compare the result with you Ld ability.
+            <ul>
+              &#128997; If the result is less or equal than the Ld
+              caracteristic, the test succeeds.
+            </ul>
+            <ul>
+              &#128997; If the result is more than Ld caracteristic, the test
+              fails and the unit flee.
+            </ul>
+          </div></a
+        >
+        if the shooting has killed more than a quarter of the models in a unit
+      </div>
+      <div class="nbmagic">
+        <h5>Magic and shooting</h5>
+        <p>
+          As for magic, there are two categories of spells to be fired off in
+          the Shooting Phase – Magic Missiles and Magical Vortexes. Human
+          wizards using Battle Magic can, for instance, blast off a quick
+          fireball, while those blessed by the Dark Gods may use the Lore of
+          Daemonology to conjure a Vortex of Chaos.
+        </p>
+        <p class="example">
+          In the shooting phase, you will be able to cast powerfull magic
+          spells. Let's take a look in the <a href="">Magic</a> section.
+        </p>
+      </div>
+    </article>
+    <article class="article" id="combat">
+      <h3>The combat phase</h3>
+      <p>
+        You may not be surprised by this point to discover that the fourth and
+        final phase of the Game Round is divided into four simple steps: Choose
+        & Fight, Calculate Result, Break Test, and Pursuit. As with the Shooting
+        phase, these steps are followed in order for each separate combat.
+      </p>
+      <h4>1. Choose and fight</h4>
+      <p>
+        You begin the phase by choosing which combat you want to begin first. In
+        general, fighting happens in ranks, and only the first rank of an
+        engaged unit can fight. However, a unit with a wider fighting rank than
+        its opponent can still attack with every model in that rank – your
+        troops surround and envelop the other regiment.
+      </p>
+      <p>
+        There are plenty of wrinkles to this – some models may make supporting
+        attacks from a deeper rank, multiple units can be engaged in the same
+        combat, and any model that is able to fight without being in base
+        contact may only make one attack this turn.
+      </p>
+      <p>
+        Once you’ve worked out who can fight, it’s time to determine Initiative
+        for each model and see who strikes first. The model with the highest
+        Initiative statistic strikes first, and so on down the order – with a
+        bonus for charging and a bigger one for hitting them in the flank or
+        rear.
+      </p>
+      <p class="example">
+        There could still be a situation, however, in which a lumbering foe like
+        a Stone Troll (Initiative 1) may find itself striking second on the
+        charge against the preternatural senses of a Swordmaster of Hoeth
+        (Initiative 6).
+      </p>
+      <div class="nb">
+        <h5>Weapon Skill and Rolling to Hit</h5>
+        <p>
+          You roll as many dice as your engaged models have Attacks and, with
+          the higher Initiative models striking first, a charging unit has the
+          opportunity to overwhelm its enemies before they have the wit to swing
+          back. Next, you roll to wound and make armour saves as normal.
+          <br />
+          <br />
+          Casualties are removed from the back ranks, representing the rear
+          ranks stepping forward as their comrades bite the dirt. Set every
+          death in each unit aside – you’ll need to tot them up for the next
+          step…
+        </p>
+        <img
+          src="https://www.warhammer-community.com/wp-content/uploads/2023/11/yfdF7sGiTdf9O8AP.jpg"
+          alt="table to hit"
+        />
+      </div>
+      <h4>2. Calulating the combat result</h4>
+      <p>
+        Combats in Warhammer: The Old World are usually decisive – one side or
+        the other makes the breakthrough, and the loser is pushed back or
+        breaks. Unlike in other Warhammer games, you don’t flee based on your
+        Leadership alone; you have to calculate the Combat Result – in other
+        words, you work out who’s won by totting up who’s killed who.
+      </p>
+      <p>
+        It’s not just how many deaths you’ve caused, however – you get bonuses
+        for complete ranks, for having the high ground, for standard bearers,
+        and for attacking the side or rear.
+      </p>
+      <h5>Combat result score</h5>
+      <!-- still work here -->
+      <p>
+        To determine teh combat result score, consult the table bellow and
+        calculate how many combat result points your unit(s) scored.
+      </p>
+      <table id="tablecombatwound">
+        <tbody>
+          <tr>
+            <td>Unsaved wounds inflicted</td>
+            <td>1pt each</td>
+          </tr>
+          <tr>
+            <td>Rank bonus</td>
+            <td>+1 pt /rank</td>
+          </tr>
+          <tr>
+            <td>Standart</td>
+            <td>+1 pt</td>
+          </tr>
+          <tr>
+            <td>Battle Standart</td>
+            <td>+1 pt</td>
+          </tr>
+          <tr>
+            <td>Flank attack</td>
+            <td>+1 pt</td>
+          </tr>
+          <tr>
+            <td>Rear attack</td>
+            <td>+2 pt</td>
+          </tr>
+          <tr>
+            <td>High ground</td>
+            <td>+1 pt</td>
+          </tr>
+          <tr>
+            <td>Overkill</td>
+            <td>+1 pt/excess wound</td>
+          </tr>
+          <tr>
+            <td>Other Bonuses</td>
+            <td>As applicable</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        Add it all up and see who’s won. If it’s a draw, combat continues next
+        turn, but if there’s a clear loser, they must take a Break Test. This is
+        a Leadership test modified by how much you lost the combat by, and with
+        several outcomes:
+      </p>
+      <h4>3. Break test</h4>
+      <ul>
+        &#128997; If the natural roll is higher than the Leadership stat of the
+        testing unit’s leader (either that of its Champion or of a Hero model
+        that’s joined it), then the unit
+        <a class="hiddentext">
+          Breaks and Flees
+          <div class="popup">
+            <h5>&#128997; Break and flee</h5>
+            <br />
+            <br />
+            The losing unit turns and runs in the opposite direction from
+            whatever caused it to flee (and whichever enemy unit had the
+            stronger unit strength if it was a multiple combat).
+            <br />
+            <br />
+            They run 2D6”, pivoting only to avoid impassable terrain, and if any
+            part of the fleeing unit crosses a battlefield edge, it is
+            destroyed.
+            <br />
+            <br />
+            If the enemy gives chase and rolls high enough on 2D6 to make
+            contact, the fleeing unit is destroyed. If they run through another
+            enemy unit, they take additional wounds as they go. If they run
+            through a friendly unit, however, they’re safe – but that unit may
+            now bear the brunt of the pursuers’ charge. In short: try not to
+            break and flee.
+          </div>
+        </a>
+      </ul>
+      <ul>
+        &#128997; If the modified roll is higher than the Leadership stat, but
+        the natural roll is lower, the unit
+        <a class="hiddentext"
+          >Fall backs in Good Order
+          <div class="popup">
+            <h6>&#128997; Fall back in Good order</h6>
+            <br />
+            A unit that falls back in good order is still beating a hasty
+            retreat, but they’ve not yet lost that fighting spirit. They can
+            discard the lower of the two dice when they flee, and they
+            automatically rally and reform at the end, ready to receive the
+            charge of their pursuer – or to hit back in the next turn.
+          </div>
+        </a>
+      </ul>
+      <ul>
+        &#128997;If the modified roll is lower than the Leadership stat, or if
+        you roll a double 1, the unit
+        <a class="hiddentext"
+          >Gives ground
+          <div class="popup">
+            <h6>&#128997; Give ground</h6>
+            <br />
+            Giving ground is the best result when losing combat. The loser
+            simply steps back 2” (terrain permitting), attempting to put some
+            much needed space between them and the foe – unless, of course, the
+            winner chooses to follow up and press their advantage, in which case
+            combat continues next turn.
+          </div></a
+        >.
+      </ul>
+      <p>
+        It may seem complex at first glance, but it’s a mechanic that quickly
+        becomes clear once you’ve run through a few combats – and it adds a ton
+        of tactical depth to the most important part of the game.
+      </p>
+      <div class="nb">
+        <h5>Break test exemple</h5>
+        <img
+          src="https://www.warhammer-community.com/wp-content/uploads/2023/11/sRnoeMjGABb0GFui.jpg"
+          alt="exemplebreakdown"
+        />
+      </div>
+      <h4>4. Pursuit</h4>
+      <p>
+        When you win a combat, you have a range of choices depending on how the
+        enemy reacts:
+      </p>
+      <ul class="list">
+        &#128997;
+        <u>Restrain</u>
+        <br />
+        Pass a
+        <a class="hiddentext"
+          >leadership test
+          <div class="popup">
+            <h6>Leadership test</h6>
+            <p>
+              Roll 2D6 and compare the moral caracteristic of the tested model,
+            </p>
+            <ul>
+              &#128997; If the result is less or equal to the ld caracteristic,
+              the test succeed.
+            </ul>
+            <ul>
+              &#128997; If the result is more than the ld, your model/unit, the
+              test failed.
+            </ul>
+          </div>
+        </a>
+        to avoid pursuit and instead reform your ranks for free
+      </ul>
+      <ul>
+        &#128997;
+        <u>Follow up</u>
+        <br />follow a unit that gave ground, re-entering combat a few inches
+        forward
+      </ul>
+      <ul>
+        &#128997;
+        <u>Pursue</u>
+        <br />
+        Pursue a unit that flees or falls back. If you catch a fleeing unit,
+        it’s cut down and destroyed. If you catch a unit falling back, combat
+        begins again and the pursuer counts as having charged
+      </ul>
+      <div class="nb">
+        <h5>OVERRUN</h5>
+        <p>
+          In the case that the victor has completely killed its target, it may
+          make a full move directly forward… and if you end up in another
+          combat, that counts as a fresh charge. Clever use of Overruns will
+          have heavy cavalry licking its lips…
+        </p>
+      </div>
+      <br />
+      <div class="nbmagic">
+        <h5>Magic and combat</h5>
+        <p>
+          There’s plenty more to the Combat phase – Wizards can use Assailment
+          spells, for instance, while units fighting from behind a barricade or
+          wall benefit from the extra protection.
+        </p>
+        <p class="example">
+          It's possible to cast some spell during the combat phase to assist
+          your troops. Look at the F
+        </p>
+      </div>
+    </article>
+    <article class="article" id="moral">
+      <h3>Morale</h3>
+      <p>
+        A battlefield – no matter what the average Bestigor might claim – is not
+        a happy place to be in the Old World. What with marauding bands of
+        bickering Orcs, frenzied Chaos Warriors bearing the gifts of the gods,
+        and terrifying dragons, both living and dead, all rampaging around the
+        domains of Man, this is not a good place to be a lowly Imperial trooper
+        waggling a halberd.
+      </p>
+      <p>
+        In case one unit loose a combat during the
+        <a class="links" href="#combat">combat phase</a>, a break test will be
+        needed.
+      </p>
+      <p>
+        Let's take the break test exemple again. There is outcomes: Break and
+        Flee, Fall Back in Good Order, and Give Ground.
+      </p>
+      <img
+        src="https://www.warhammer-community.com/wp-content/uploads/2023/11/OtjQc85GClPfkxCa.jpg"
+        alt="breaktest2"
+      />
+      <ul class="nb">
+        <h5>&#128997; Break and flee</h5>
+        <br />
+        <br />
+        The losing unit turns and runs in the opposite direction from whatever
+        caused it to flee (and whichever enemy unit had the stronger unit
+        strength if it was a multiple combat).
+        <br />
+        <br />
+        They run 2D6”, pivoting only to avoid impassable terrain, and if any
+        part of the fleeing unit crosses a battlefield edge, it is destroyed.
+        <br />
+        <br />
+        If the enemy gives chase and rolls high enough on 2D6 to make contact,
+        the fleeing unit is destroyed. If they run through another enemy unit,
+        they take additional wounds as they go. If they run through a friendly
+        unit, however, they’re safe – but that unit may now bear the brunt of
+        the pursuers’ charge. In short: try not to break and flee.
+      </ul>
+      <ul class="nb">
+        <h5>&#128997; Fall back in good order</h5>
+        <br /><br />a unit that falls back in good order is still beating a
+        hasty retreat, but they’ve not yet lost that fighting spirit. They can
+        discard the lower of the two dice when they flee, and they automatically
+        rally and reform at the end, ready to receive the charge of their
+        pursuer – or to hit back in the next turn.
+      </ul>
+      <ul class="nb">
+        <h5>&#128997; Give ground</h5>
+        <br /><br />Giving ground is the best result when losing combat. The
+        loser simply steps back 2” (terrain permitting), attempting to put some
+        much needed space between them and the foe – unless, of course, the
+        winner chooses to follow up and press their advantage, in which case
+        combat continues next turn.
+      </ul>
+    </article>
+    <div class="article" id="psychoarticle">
+      <h4 id="psycho">Psychologie</h4>
+      <p>You can find here all the psychologie rules we know till now.</p>
+      <div class="nbpsycho">
+        <h5>Fear</h5>
+        <p>
+          If an enemy with lower Unit Strength wishes to charge a Fear-causing
+          unit, it must first take a Leadership test, or its charge will fail.
+          Already in combat with a scary regiment of Skeleton Warriors? Take a
+          Leadership test each round or suffer -1 to hit!
+        </p>
+      </div>
+      <div class="nbpsycho">
+        <h5>Terror</h5>
+        <p>
+          If you’re charged by a beast with this effect, you have to take a
+          Leadership test just to be able to declare a charge reaction – if you
+          fail, you flee. And that’s before any dice are rolled to see if the
+          charge succeeds. Terror also applies an extra -1 penalty to opposing
+          units’ Leadership characteristic when taking Break Tests – making a
+          break and flee outcome that much more likely.
+        </p>
+      </div>
+      <div class="nbpsycho">
+        <h5>Stupidity</h5>
+        <p>coming soon</p>
+      </div>
+      <div class="nbpsycho">
+        <h5>Animosity</h5>
+        <p>coming soon</p>
+      </div>
+      <div class="nbpsycho">
+        <h5>Frenzy</h5>
+        <p>
+          this gives models in a unit an extra Attack, and also immunity from
+          Fear and Terror. A Frenzied unit, however, must always charge if able
+          to and can never choose to Flee from a charge.
+        </p>
+        <p class="example">This rule could be given with a spell</p>
+      </div>
+      <div class="nbpsycho">
+        <h5>Unbreakable</h5>
+        <p>coming soon</p>
+      </div>
+      <div class="nbpsycho">
+        <h5>Stubborn</h5>
+        <p>coming soon</p>
+      </div>
+      <div class="nbpsycho">
+        <h5>Hatred</h5>
+        <p>coming soon</p>
+      </div>
+    </div>
+    <article class="article" id="magic">
+      <h3>Magic</h3>
+      <p>
+        Magic is even more prevalent as it’s cast during every phase of the
+        game.
+      </p>
+      <p>
+        Warhammer: The Old World is set at a time before the Colleges of Magic
+        were established. Imperial Wizards were still very much around and
+        tapping into the eight winds, but the study of magic had yet to be so
+        formalised in human lands.
+      </p>
+      <p>
+        That’s not to say that there aren’t lores – there are eight in the core
+        rulebook alone, each representing a particular approach to the study of
+        magic: Battle Magic, Dark Magic, Daemonology, Elementalism, High Magic,
+        Illusion, Necromancy, and Waaagh! Magic. Most mages will have access to
+        two or more of these, selecting one Lore at the start of each battle.
+      </p>
+      <p>
+        Each Lore has seven spells, with one being a signature spell that’s
+        always available to its adherents. Every magic user has a level running
+        from one to four – the higher the level, the more puissant the wizard,
+        and the more spells they know at the start of the game.
+      </p>
+      <div class="nb">
+        <h5>Strategy phase</h5>
+        <div class="undernb">
+          <h6>Enchantment</h6>
+          <p>
+            Spells that empowered the caster's allies, protecting them with
+            sorcerousward and magically enhancing their fighting prowess.
+          </p>
+        </div>
+        <div class="undernb">
+          <h6>Hex</h6>
+          <p>
+            The opposite of enchantement spells, spells that weakens the enemy
+            in some way. Perhaps slowing them down or sapping their strenghs.
+          </p>
+        </div>
+      </div>
+      <div class="nb">
+        <h5>Movement phase</h5>
+        <div class="undernb">
+          <h6>Covenance</h6>
+          <p>
+            Theese spells enable wizards to enhance movement or transport unit
+            from place to place.
+          </p>
+        </div>
+      </div>
+      <div class="nb">
+        <h5>Shooting phase</h5>
+        <div class="undernb">
+          <h6>Magic missiles</h6>
+          <p>
+            These are sorcerous projectiles that the wizard hulrs to the foe.
+            Magic misiles can only target enemy units
+          </p>
+        </div>
+        <div class="undernb">
+          <h6>Magical Vortex</h6>
+          <p>
+            Thes are roiling globes of magical enery that travel across the
+            battlefield wreaking all kinds of havoc.
+          </p>
+        </div>
+      </div>
+      <div class="nb">
+        <h5>Combat phase</h5>
+        <div class="undernb">
+          <h6>Assailment</h6>
+          <p>
+            Thes spells are deadly attacks that strikes the foe without warning.
+          </p>
+        </div>
+      </div>
+      <p>
+        There are six types of spell: Enchantment and Hex (Strategy phase),
+        Conveyance (Movement phase), Magic Missile and Magical Vortex (Shooting
+        phase), and Assailment (Combat phase). These are cast in the appropriate
+        phase, so units can end up Enchanted or Hexed from the outset of your
+        turn, magically moved when it’s time to charge, and blasted with arcane
+        power when the rest of the shooting happens.
+      </p>
+      <p>
+        Each conjuration has a casting value appropriate to how complex it is,
+        and spells are cast on 2d6, adding the skill level of the caster. It’s a
+        quicker system than the previously used Winds of Magic cards or pools of
+        dice – leaving the tactical decisions of what to cast and when.
+      </p>
+      <div class="nbmagic">
+        <h6>Casting roll</h6>
+        <p>Roll 2D6 + Level of the Caster</p>
+        <!-- put it bigger an center. Make a special one -->
+      </div>
+      <h5>Miscast</h5>
+      <p>
+        If a natural double roll of 1 is roll when making a casting roll,
+        regardless of the casting result, it has been miscast, and unless stated
+        otherwise, s not cast. Roll immediatly on the miscast table to see what
+        fate fate befalls your nfortunate wizard.
+      </p>
+      <p class="example">
+        Magic is still very much a duel between opposing wizards. It’s still
+        perfectly possible to Miscast should you roll a double 1, or to achieve
+        a Perfect Invocation on a double 6.
+      </p>
+      <table class="miscast">
+        <!--  work on it table -->
+        <thead>
+          <tr>
+            <th>2D6</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2-4</td>
+            <td>
+              <u>Dimensionale cascade</u>: The summoned magic breaks free
+              creatin a tornadoe. Center a 5" blast template over the Wizard.
+              Every Model (friend or foe) whose base lies underneath the
+              templaterisk being hit and suffering a single Strengh 10 hit with
+              an AP of -4.
+            </td>
+          </tr>
+          <tr>
+            <td>5-6</td>
+            <td>
+              <u>Calamitus Detonation</u>: Roiling magic explode from the wizard
+              with a flash of light. Centrea 3" blaster template over the
+              wizard. Every models (friends or foes) whose base lies underneath
+              the templaterisk being hit and suffering a single Strengh 6 hit
+              with an AP of -2.
+            </td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>
+              <u>Careless Conjuration :</u> The Wizard mispronounces a syllable,
+              causing the spell to backfire, knoking them top the grouns. The
+              Wizard suffers a single Strengh 4 it with AP -1.
+            </td>
+          </tr>
+          <tr>
+            <td>8-9</td>
+            <td>
+              <u>Barrely Controlled Power</u>The wizard manages to control the
+              magic, but at the explense of great power. The spell is cast (at
+              it casting value, for the purpose of dispels attempts). However,
+              you cannot attemp to cast anymore spells for the remainder of the
+              currents turn.
+            </td>
+          </tr>
+          <tr>
+            <td>10-12</td>
+            <td>
+              <u>Power Drain</u>: Withe a deafening boom , the summoned magic is
+              unleashed and unnatural calm descends. The spell is cast with a
+              perfect invocation. However, you cannot atempt to cast any more
+              spellsfor the remainder of the current turn.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      <h5>Wizardly Dispel</h5>
+      <div>
+        What’s more, every spellcaster can attempt to dispel their opponents’
+        conjurations – provided they’re within 18” as first and second-level
+        casters, or 24” at levels three and four. Roll 2D6 and add your level to
+        the roll – if you beat the casting roll, the target spell is cancelled.
+        A double 6 counts as an
+        <a class="hiddentext"
+          >Unbinding
+          <div class="popup">Unbindings results count as auto dispels</div></a
+        >, dispelling no matter the casting roll, but should you roll a double
+        1, you’ve been
+        <a class="hiddentext">
+          Outclassed in the Art
+          <div class="popup">
+            Ouclassed in the art could be interpreted like a perils but while
+            trying to dispel
+          </div></a
+        >
+        – and you must roll on the Miscast Table…
+      </div>
+      <p>
+        What’s more, both Casting and Dispel rolls can be further modified by
+        the wealth of magic items available to Wizards, and by a number of
+        special rules. It’s a real battle of arcane wits out there.
+      </p>
+      <div>
+        If a player finds themselves unable to attempt a Wizardly dispel, they
+        may make one
+        <a class="hiddentext"
+          >Fated Dispel
+          <div class="popup">
+            Fated Dispel are the old dissipation parchmin
+          </div> </a
+        >per turn – an unmodified 2D6 attempt. To offset this, certain units
+        (notably Dwarfs) have an innate resistance to magic, making it harder
+        for enemy wizards to cast spells upon them successfully. Yet even Dwarfs
+        have some recourse to the arcane – Runesmiths are perfectly capable of
+        making dispel attempts.
+      </div>
+      <div class="nbmagic">
+        <h6>Dispelling</h6>
+        <ol>
+          &#128997;
+          <u>Wizard lvl 1&2</u>
+          : 18" conjuration
+        </ol>
+        <ol>
+          &#128997;
+          <u>Wizard lvl 3&4</u>
+          : 24" conjuration
+        </ol>
+        <ol>
+          &#128997; Roll 2D6 + Wizard Level
+        </ol>
+      </div>
+    </article>
+    <article class="article">
+      <h3>Books of Magic</h3>
+      <p>Listed and knowed spells from magic books</p>
+      <div class="nb">
+        <h4>Battle Magic</h4>
+        <div class="nbmagic">
+          <h5>Hammerhand</h5>
+          <br />
+          <table>
+            <tr>
+              <b>Type : </b>
+              Assailment
+            </tr>
+            <br />
+            <tr>
+              <b>Casting Value : </b>
+              7+
+            </tr>
+            <br />
+            <tr>
+              <b>Range : </b
+              >Combat
+            </tr>
+            <br />
+            <tr>
+              <b>Effect : </b
+              >A single enemy unit the caster is engaged in combat with suffers
+              2D3 Strengh 4 hits, AP-2.
+            </tr>
+          </table>
+        </div>
+        <div class="nbmagic">
+          <h5>Fire Ball</h5>
+          <br />
+          <table>
+            <tr>
+              <b>Type : </b>
+              Magic Missile
+            </tr>
+            <br />
+            <tr>
+              <b>Casting Value : </b>
+              8+
+            </tr>
+            <br />
+            <tr>
+              <b>Range : </b
+              >24"
+            </tr>
+            <br />
+            <tr>
+              <b>Effect : </b
+              >The Target Unit suffers 2D6 Strengh 4 hits, each with an AP of -.
+              This Spell has the flaming attacks special rule
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="nb">
+        <h4>Elementalism</h4>
+        <div class="nbmagic">
+          <h5>Storm Call</h5>
+          <br />
+          <table>
+            <tr>
+              <b>Type : </b>
+              Hex
+            </tr>
+            <br />
+            <tr>
+              <b>Casting Value : </b>
+              7+
+            </tr>
+            <br />
+            <tr>
+              <b>Range : </b
+              >12"
+            </tr>
+            <br />
+            <tr>
+              <b>Effect : </b
+              >Until your next Start of Turn sub-phase, the target enemy units
+              suffer a -1 modifier to its movements and Initiative
+              characteristics to a minimum of 1. If this spell is cast, the
+              effect of any other Hex presviously cast on the target Unit
+              immediatly expire.
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="nb">
+        <h4>Illusion</h4>
+        <div class="nbmagic">
+          <h5>Glittering Robe</h5>
+          <br />
+          <table>
+            <tr>
+              <b>Type : </b>
+              Enchantment
+            </tr>
+            <br />
+            <tr>
+              <b>Casting Value : </b>
+              8+
+            </tr>
+            <br />
+            <tr>
+              <b>Range : </b
+              >Self
+            </tr>
+            <br />
+            <tr>
+              <b>Effect : </b
+              >Until your next Start of Turn sub-phase, enemy units suffer a -1
+              modifier to any rolls to hit made against the Caster and any unit
+              they have joined. If this spell is cast, the effect of any other
+              enchantment presviously cast on the affected models immediatly
+              expire.
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="nb">
+        <h4>Dark Magic</h4>
+        <div class="nbmagic">
+          <h5>Fire Ball</h5>
+          <br />
+          <table>
+            <tr>
+              <b>Type : </b>
+              Assailment
+            </tr>
+            <br />
+            <tr>
+              <b>Casting Value : </b>
+              7+
+            </tr>
+            <br />
+            <tr>
+              <b>Range : </b
+              >Combat
+            </tr>
+            <br />
+            <tr>
+              <b>Effect : </b
+              >A single enemy model the caster is engaged in combat with suffers
+              a single Strengh 3 hit with the Multiple Wound 3 special rule and
+              with no armour save permitted (Ward and regenaration saves can be
+              attempted as normal).
+            </tr>
+          </table>
+        </div>
+        <div class="nbmagic">
+          <h5>Battle Lust</h5>
+          <br />
+          <table>
+            <tr>
+              <b>Type : </b>
+              Enchantment
+            </tr>
+            <br />
+            <tr>
+              <b>Casting Value : </b>
+              9+
+            </tr>
+            <br />
+            <tr>
+              <b>Range : </b
+              >12"
+            </tr>
+            <br />
+            <tr>
+              <b>Effect : </b
+              >Until the end of this turn, the target friendly unit gains the
+              Frenzy and Hatred (all enemies) special rule.
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="nb">
+        <h4>Daemonology</h4>
+        <div class="nbmagic">
+          <h5>Vortex of Chaos</h5>
+          <br />
+          <table>
+            <tr>
+              <b>Type : </b>
+              Magic Vortex
+            </tr>
+            <br />
+            <tr>
+              <b>Casting Value : </b>
+              8+
+            </tr>
+            <br />
+            <tr>
+              <b>Range : </b
+              >15"
+            </tr>
+            <br />
+            <tr>
+              <b>Effect : </b
+              >Remain in Play. Place a small 3" last template so that its
+              centrale hole is withhin 15" of the caster. Whislt in play, the
+              template is treated as dangerous terrain. The template moves D6"
+              in a randomdirection during every start of Turn Subphase. Any
+              Unit, Friend or Foe, the moving template touch or moves over
+              suffers D6+1 Strengh 3 Hits with AP of -.
+            </tr>
+          </table>
+        </div>
+      </div>
+    </article>
+    <article class="article" id="specialrule">
+      <h3>Universal special rules</h3>
+      <div class="nbpsycho">
+        <h5>Shieldwave</h5>
+        Your Unit can Give Ground instead of Falling Back.
+      </div>
+      <div class="nbpsycho">
+        <h5>Stubborn</h5>
+        The first time they are required to take a Break Test they don’t need to
+        risk a dice roll. Instead, they Fall Back in Good Orde
+      </div>
+      <div class="nbpsycho">
+        <h5>Armour Bane (x)</h5>
+        If a modell with this special rule roles a natural 6 hen making roll to
+        wound, the armour piercing characteristic its weapon is improved by the
+        amount shows in bracket after the name (X)
+      </div>
+      <div class="nbpsycho">
+        <h5>Blessing Of The Lady - Bretonnian Only</h5>
+        The Blessings of the Lady is an army-wide rule for the Kingdom of
+        Bretonnia. Instead of rolling to see who goes first, a Bretonnian army
+        may instead kneel to pray for the protection of the Lady of the Lake.
+        This grants a 6+ Ward Save (invulnerable save) against any wounds
+        suffered, or 5+ against wounds of Strength 5 or higher. Of course, this
+        blessing can be lost by besmirching one’s own honour – either when a
+        unit flees, or a character declines a challenge.
+      </div>
+      <div class="nbpsycho">
+        <h5>Counter Charge</h5>
+        If an unit is charged by Monster, Cavalry, and Charriot from a longer
+        distance than their attacker's movement characteristic, this charged
+        unit can move D3+1 in response. Both parts count as charging and
+        Initiative then come into play.
+      </div>
+    </article>
+    <article id="meleeweapons" class="article">
+      <h3>Melee Weapons</h3>
+      <div class="nbpsycho">
+        <h6>Hand Weapon</h6>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>R</th>
+              <th>S</th>
+              <th>AP</th>
+              <th>Special Rule</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Hand Weapon</td>
+              <td>Combat</td>
+              <td>S</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="example">
+          Unless specified otherwise, every models are assumed to be equiped
+          with a Hand weapon.
+        </p>
+      </div>
+      <div class="nbpsycho">
+        <h6>Two Hand Weapon/Additional Hand weapon</h6>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>R</th>
+              <th>S</th>
+              <th>AP</th>
+              <th>Special Rule</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>two Hand Weapon</td>
+              <td>Combat</td>
+              <td>S</td>
+              <td>-</td>
+              <td>Extra Attacks (+1), Requires two Hands</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="example">
+          Unless specified otherwise, every models are assumed to be equiped
+          with a Hand weapon.
+        </p>
+      </div>
+    </article>
+    <article id="shooting" class="article">
+      <h3>Shooting Weapons</h3>
+      <div class="nbpsycho">
+        <h6>Long Bow</h6>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>R</th>
+              <th>S</th>
+              <th>AP</th>
+              <th>Special Rule</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Long Bow</td>
+              <td>30"</td>
+              <td>3</td>
+              <td>-</td>
+              <td>
+                Armour Bane (1),<a class="hiddentext"
+                  >Volley fire
+                  <div class="popup">
+                    <h6>&#128997; Volley Fire</h6>
+                    <br />
+                    A second Rank is able to shoot.
+                  </div>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="nbpsycho">
+        <h6>Short Bow</h6>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>R</th>
+              <th>S</th>
+              <th>AP</th>
+              <th>Special Rule</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Short Bow</td>
+              <td>18"</td>
+              <td>3</td>
+              <td>-</td>
+              <td>
+                Quick Shot,
+                <a class="hiddentext"
+                  >Volley fire
+                  <div class="popup">
+                    <h6>&#128997; Volley Fire</h6>
+                    <br />
+                    A second Rank is able to shoot.
+                  </div>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="nbpsycho">
+        <h6>War Bow</h6>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>R</th>
+              <th>S</th>
+              <th>AP</th>
+              <th>Special Rule</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>War Bow</td>
+              <td>24"</td>
+              <td>S</td>
+              <td>-</td>
+              <td>
+                <a class="hiddentext"
+                  >Volley fire
+                  <div class="popup">
+                    <h6>&#128997; Volley Fire</h6>
+                    <br />
+                    A second Rank is able to shoot.
+                  </div>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="nbpsycho">
+        <h6>Screaming Skulls Catapult</h6>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>R</th>
+              <th>S</th>
+              <th>AP</th>
+              <th>Special Rule</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Catapult</td>
+              <td>12"-60"</td>
+              <td>4(8)</td>
+              <td>-1(-3)</td>
+              <td>
+                Bombardment, Cumbersome, Flaming attacks, Magical Attacks, Move
+                or shoot, Multiple Wound D3+1, Screaming Skulls
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="example">
+          <u>Notes:</u> his weapon shoots like a stone thrower, using the
+          'Bombardment' special rule, a 3" blast template and the Stone Thrower
+          Misfire table. The Multiple Wounds (D3+1) special rule applies only to
+          a single model whose base lies underneath the central hole of the
+          blast template.
+        </p>
+      </div>
+    </article>
+  </body>
+</html>
