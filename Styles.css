@@ -37,6 +37,13 @@
   background-image: url(https://www.theoldworld.com/media/rgijyxk2/separator-large.webp);
 }
 
+.headerfaction {
+  padding: 1.8rem;
+  text-align: center;
+  margin-bottom: 0.6rem;
+  background-image: url(https://cf-images.us-east-1.prod.boltdns.net/v1/jit/5778310444001/73362718-1865-4bf9-aa95-b88ea28805ce/main/1280x720/4s992ms/match/image.jpg);
+}
+
 .maintext {
   text-align: center;
 }
@@ -122,8 +129,9 @@ article #movement {
   column-count: 3;
 }
 
-article #psychoarticle {
+#psychoarticle {
   column-count: 3;
+  column-gap: 1rem;
 }
 
 .nb {
@@ -226,6 +234,24 @@ article #psychoarticle {
   border-style: inset;
 }
 
+#articlekingdomof {
+  color: black;
+  margin: 0.6rem;
+  padding: 0.6rem;
+  column-count: 2;
+  column-gap: 2.5rem;
+  text-align: justify;
+  border: solid;
+  border-color: #dadada;
+  background-color: #202020;
+  border-style: inset;
+  background-image: url(https://i.pinimg.com/originals/7d/d3/6a/7dd36abd6267fc2263000521385d6689.jpg);
+}
+
+#titlekingdomof {
+  color: black;
+}
+
 .article img {
   padding-top: 0.8rem;
   height: 100%;
@@ -286,6 +312,8 @@ th {
   background-color: #424546;
 }
 
+/* RESPONSIVNESS */
+
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
   .leftcolumn,
@@ -302,14 +330,26 @@ th {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   body {
-    margin: 0; /* Set margin to 0 for smaller screens */
+    margin-left: 0; /* Set margin to 0 for smaller screens */
+    margin-right: 0;
   }
+
   .turnsequence {
     column-count: 1;
   }
   .stratphase {
+    column-count: 1;
+  }
+  #movement {
+    column-count: 1;
+  }
+  .article {
+    column-count: 1;
+  }
+
+  #knightvirtue {
     column-count: 1;
   }
 }
@@ -323,10 +363,6 @@ th {
 /* Create two unequal columns that floats next to each other */
 /* Left column */
 
-body {
-  box-sizing: border-box;
-}
-
 .leftcolumn {
   flex: 3; /* 75% width */
   padding: 0.6px;
@@ -339,13 +375,6 @@ body {
   background-color: none;
 }
 
-.fixeddata {
-  height: 100px; /* Set the desired height */
-  color: #fff;
-  text-align: center;
-  line-height: 100px;
-  background-color: #3498db;
-}
 .articledata {
   display: flex;
   flex-wrap: wrap;
@@ -366,7 +395,7 @@ body {
 
 .detailsdatasheet {
   padding: 0.2rem;
-  margin: 0rem;
+  margin: 1rem;
   background-color: #202020;
   border-style: inset;
   text-align: left;
@@ -403,60 +432,6 @@ body {
   padding-top: 0.2rem;
   padding-bottom: 0.2rem;
   margin: 0.2rem;
-}
-
-.imgpopup {
-  width: 70%;
-  height: auto;
-}
-
-/* POPUP ADVETRISMENT  */
-
-#pub {
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrswwOFilYaeRrXTts8egJCc2HuiyHUwGEGYJmi8_hBGscWg0x9KlVqvMr0wPx6HJNIFo&usqp=CAU");
-  padding: 0.6rem;
-  margin: 0.6rem;
-  border-style: inset;
-  width: 15rem;
-  height: auto;
-  position: fixed;
-  top: 50%;
-  left: 1%;
-}
-
-#pubbox2 {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 10px;
-  width: 300px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: none; /* Initially hide the container */
-}
-
-#pub p {
-  font-size: 1.6rem;
-  color: white;
-  margin-top: 0rem;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* Adjust the last value (0.5) for opacity */
-}
-
-#pub a {
-  font-size: 2rem;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* Adjust the last value (0.5) for opacity */
-  align-items: center;
 }
 
 .disclaimer {

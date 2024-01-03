@@ -13,55 +13,137 @@
     <script src="myscripts.js"></script>
   </head>
   <body>
-    <button id="scrollToTopBtn" onclick="scrollToTop()">Top</button>
+    <!--     Here advertissement
+ -->
+    <style>
+      bodypub {
+        color: black;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+      }
+
+      #linkpub {
+        color: black;
+        font-size: 1.4rem;
+        align-items: center;
+        justify-content: center;
+        margin-left: 1.4rem;
+      }
+
+      #linkpub:hover {
+        color: red;
+      }
+
+      #popup-container {
+        position: fixed;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 20px;
+        background-color: #7776e5;
+        color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        display: none; /* Initially hide the popup */
+      }
+
+      #close-btn {
+        background-color: #fff;
+        color: Black;
+        margin-left: 3.5rem;
+        border: none;
+        align-items: center;
+        cursor: pointer;
+      }
+    </style>
+
+    <div id="popup-container">
+      <p>Want a 3D printed army?</p>
+      <br />
+      <a id="linkpub" href="https://t.me/CommissarYarrick666">Telegram Me</a>
+      <br />
+      <br />
+      <button id="close-btn" onclick="closePopup()">Close</button>
+    </div>
+
     <script>
-      // Get the button
-      var mybutton = document.getElementById("scrollToTopBtn");
-
-      // When the user scrolls down 20px from the top of the document, show the button
-      window.onscroll = function () {
-        scrollFunction();
-      };
-
-      function scrollFunction() {
-        if (
-          document.body.scrollTop > 20 ||
-          document.documentElement.scrollTop > 20
-        ) {
-          mybutton.style.display = "block";
-        } else {
-          mybutton.style.display = "none";
-        }
+      function closePopup() {
+        document.getElementById("popup-container").style.display = "none";
       }
 
-      // When the user clicks on the button, scroll to the top of the document
-      function scrollToTop() {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      // Function to open the popup
+      function openPopup() {
+        document.getElementById("popup-container").style.display = "block";
       }
+
+      // Call openPopup function to show the popup initially
+      openPopup();
     </script>
-    <div class="header">
+    <div class="headerfaction">
       <h1 class="maintext">Kriegapedia</h1>
       <h3 class="maintext" style="color: #202020">
         Factions for Warhammer Old World
       </h3>
     </div>
     <nav class="topnav">
-      <a href="#strategy">Strategy Phase</a>
+      <a
+        target="blank"
+        href="http://127.0.0.1:5500/Corerules.html"
+        href="#strategy"
+        >Strategy Phase</a
+      >
 
-      <a href="#move">Movement Phase</a>
+      <a target="blank" href="http://127.0.0.1:5500/Corerules.html" href="#move"
+        >Movement Phase</a
+      >
 
-      <a href="#shooting">Shooting Phase</a>
+      <a
+        target="blank"
+        href="http://127.0.0.1:5500/Corerules.html"
+        href="#shooting"
+        >Shooting Phase</a
+      >
 
-      <a href="#combat">Combat Phase</a>
+      <a
+        target="blank"
+        href="http://127.0.0.1:5500/Corerules.html"
+        href="#combat"
+        >Combat Phase</a
+      >
 
-      <a href="#magic">Magic</a>
+      <a
+        target="blank"
+        href="http://127.0.0.1:5500/Corerules.html"
+        href="#magic"
+        >Magic</a
+      >
 
-      <a href="#moral">Morale</a>
+      <a
+        target="blank"
+        href="http://127.0.0.1:5500/Corerules.html"
+        href="#moral"
+        >Morale</a
+      >
 
-      <a href="#psycho">Psychology</a>
+      <a
+        target="blank"
+        href="http://127.0.0.1:5500/Corerules.html"
+        href="#psycho"
+        >Psychology</a
+      >
 
-      <a href="#specrule">Special Rules</a>
+      <a
+        target="blank"
+        href="http://127.0.0.1:5500/Corerules.html"
+        href="#specrule"
+        >Special Rules</a
+      >
 
       <a href="#weapons">Weapons</a>
 
@@ -70,16 +152,22 @@
     <div class="disclaimer">
       <h4>Disclaimer</h4>
       <div id="disclaimertext">
-        This site is a test under construction, not a remake of
+        This website is a test under construction, not a remake of
         <i>"Back To the 90's IT"</i>. It contains all the rules leaked up to now
-        02.01.23 and will be updated. If you have questions, feedback :
-        <br />
-        <br />
+        03.01.23 and will be updated. If you have questions, or feedback,
+        <a class="disclaimerlink" href="https://t.me/CommissarYarrick666"
+          >contact me.</a
+        >
       </div>
-      <a class="disclaimerlink" href="https://t.me/CommissarYarrick666"
-        >Please Telegram Me</a
-      >
     </div>
+    <article id="articlekingdomof">
+      <h2 id="titlekingdomof">Kingdom of Bretonnia</h2>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+    </article>
     <article class="article">
       <h3>Build your army</h3>
       <p>
