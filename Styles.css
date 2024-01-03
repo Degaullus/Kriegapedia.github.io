@@ -315,6 +315,7 @@ th {
 /* RESPONSIVNESS */
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+
 @media screen and (max-width: 800px) {
   .leftcolumn,
   .rightcolumn {
@@ -334,6 +335,16 @@ th {
   body {
     margin-left: 0; /* Set margin to 0 for smaller screens */
     margin-right: 0;
+    font-size: 80%;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 80%;
   }
 
   .turnsequence {
@@ -342,10 +353,14 @@ th {
   .stratphase {
     column-count: 1;
   }
-  #movement {
+  article #movement {
     column-count: 1;
   }
   .article {
+    column-count: 1;
+  }
+
+  #psychoarticle {
     column-count: 1;
   }
 
